@@ -3,14 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexa Verse</title>
+    <title>Nexa Verse | Discover Your Next Story</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #120812;
+            color: white;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 7%;
+            background: #1c0d1c;
+            border-bottom: 1px solid #3b1d3b;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #e7b7df;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav ul li a:hover {
+            color: #e7b7df;
+        }
+
+        .sign-in {
+            background: #e7b7df;
+            color: #180918;
+            padding: 10px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1c0d1c, #35152f);
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #e7b7df;
+        }
+
+        .hero p {
+            color: #d5c5d5;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .search-box input {
+            width: 60%;
+            max-width: 600px;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 30px 0 0 30px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 16px 25px;
+            border: none;
+            border-radius: 0 30px 30px 0;
+            background: #e7b7df;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 50px 7%;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        /* Books */
+        .books {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .book-card {
+            background: #211121;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .book-cover {
+            height: 260px;
+            background: linear-gradient(145deg, #512548, #1d0c1d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .book-cover h3 {
+            font-size: 24px;
+            color: #f5d9ef;
+        }
+
+        .book-info {
+            padding: 18px;
+        }
+
+        .book-info p {
+            color: #bcaabd;
+            font-size: 14px;
+            margin: 8px 0 15px;
+        }
+
+        .read-button {
+            display: inline-block;
+            padding: 9px 16px;
+            background: #e7b7df;
+            color: #180918;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0c050c;
+            color: #9d899d;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .search-box input {
+                width: 70%;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Welcome to Nexa Verse</h1>
+    <nav>
+        <div class="logo">Nexa Verse</div>
 
-    <p>A digital home for stories, readers, and authors.</p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Discover</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <a href="#" class="sign-in">Sign In</a>
+    </nav>
+
+
+    <div class="hero">
+        <h1>Welcome to <span>Nexa Verse</span></h1>
+
+        <p>
+            Discover stories. Explore new worlds. Find your next favourite book.
+        </p>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for a book...">
+            <button>Search</button>
+        </div>
+    </div>
+
+
+    <section>
+        <h2>Featured Books</h2>
+
+        <div class="books">
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <h3>The Hollow Beneath</h3>
+                </div>
+
+                <div class="book-info">
+                    <p>By Beulah Tamunomiebaka Nashon</p>
+                    <p>A mysterious story where secrets buried beneath a school refuse to stay hidden.</p>
+                    <a href="#" class="read-button">Read Book</a>
+                </div>
+            </div>
+
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <h3>Coming Soon</h3>
+                </div>
+
+                <div class="book-info">
+                    <p>New Story</p>
+                    <p>A new world of imagination is waiting to be discovered.</p>
+                    <a href="#" class="read-button">Coming Soon</a>
+                </div>
+            </div>
+
+
+            <div class="book-card">
+                <div class="book-cover">
+                    <h3>Coming Soon</h3>
+                </div>
+
+                <div class="book-info">
+                    <p>New Story</p>
+                    <p>More original stories will be added to Nexa Verse.</p>
+                    <a href="#" class="read-button">Coming Soon</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Nexa Verse. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
